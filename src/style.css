@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+/* activa el modo oscuro por clase para poder alternarlo con el panel de ajustes */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* la boleta se imprime sin navbar, ajustes ni avisos flotantes */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
